@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Greg's Gambits</title>
+<link href="../CSS/greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+    
+    function CheckInput(x) {
+    var box = document.getElementById(x).value; 
+    if (box == "x" || box == "X") {  
+    document.getElementById(x).style.background="blue";
+    }
+    else {  
+    document.getElementById(x).style.background="red";
+    }    
+    }
+    
+    
+    function Resetbutton() {
+        document.getElementById('box1').style.background="white";
+        document.getElementById('box2').style.background="white";
+        document.getElementById('box3').style.background="white";
+        document.getElementById('box4').style.background="white";
+        document.getElementById('box5').style.background="white";
+        document.getElementById('box6').style.background="white";
+        document.getElementById('box7').style.background="white";
+        document.getElementById('box8').style.background="white";
+        document.getElementById('box9').style.background="white";
+    }
+    
+</script>
+</head>
+<body>
+<div id="container">
+ <img src="../Images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Tic-Tac-Toe</em></h1>
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="../HTML/index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="../HTML/play_games.html">Play a Game</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="../HTML/tell_greg.html">Tell Greg About Yourself</a>
+</div>
+<div id="content">
+    <h5>This game is for two players. One player is (X) and has the color blue, the other is (O) and the color is red. The goal is to get three boxes in a row (across, down, or diagonally). When you enter your letter into a box and click OK, the box will change to your color. The game ends when either a player wins, or a tie is made.... </h5>
+    <form>
+        <table>
+            <tr>
+                <td><input type="text" name="box1" id="box1" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box1')"></td>
+                <td><input type="text" id="box2" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box2')"></td>
+                <td><input type="text" id="box3" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box3')"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="box4" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box4')"></td>
+                <td><input type="text" id="box5" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box5')"></td>
+                <td><input type="text" id="box6" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box6')"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="box7" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box7')"></td>
+                <td><input type="text" id="box8" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box8')"></td>
+                <td><input type="text" id="box9" size="1" maxlength="1"><input id="okbutton" type="button" onclick="CheckInput('box9')"></td>
+            </tr>
+        </table> 
+        <p>&nbsp;</p>
+        <input type="reset" value="Press to reset game" onclick="Resetbutton()">
+    </form>
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:yourfirstname@yourlastname.com">Ian@Maze.com</a></div>
+</div>
+</body>
+</html>
